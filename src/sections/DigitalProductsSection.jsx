@@ -3,6 +3,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 import SectionTitle from "../components/ui/SectionTitle";
 import products from "../../data/products";
+import ProductCard from "../components/ui/ProductCard";
 
 export default function DigitalProductsSection() {
     return (
@@ -29,104 +30,17 @@ export default function DigitalProductsSection() {
 
                 <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
-                    {products.map((product, index) => {
+                    {products.map((product) => (
 
-                        const Icon = product.icon;
+        <ProductCard
+            key={product.title}
+            title={product.title}
+            category={product.category}
+            description={product.description}
+            icon={product.icon}
+        />
 
-                        return (
-
-                            <motion.div
-                                key={product.title}
-                                initial={{
-                                    opacity: 0,
-                                    y: 40,
-                                }}
-                                whileInView={{
-                                    opacity: 1,
-                                    y: 0,
-                                }}
-                                viewport={{
-                                    once: true,
-                                }}
-                                transition={{
-                                    delay: index * 0.07,
-                                }}
-                                whileHover={{
-                                    y: -10,
-                                }}
-                                className="group rounded-[28px] border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:border-blue-200 hover:shadow-2xl"
-                            >
-
-                                {/* Category */}
-
-                                <span className="inline-flex rounded-full bg-blue-100 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-blue-700">
-
-                                    {product.category}
-
-                                </span>
-
-                                {/* Icon */}
-
-                                <div className="mt-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white shadow-lg">
-
-                                    <Icon size={30} />
-
-                                </div>
-
-                                {/* Title */}
-
-                                <h3 className="mt-8 text-2xl font-bold text-slate-900">
-
-                                    {product.title}
-
-                                </h3>
-
-                                {/* Description */}
-
-                                <p className="mt-5 leading-7 text-slate-600">
-
-                                    {product.description}
-
-                                </p>
-
-                                {/* Divider */}
-
-                                <div className="my-8 h-px bg-slate-200" />
-
-                                {/* Footer */}
-
-                                <div className="flex items-center justify-between">
-
-                                    <div className="flex items-center gap-2 text-blue-600">
-
-                                        <Sparkles size={18} />
-
-                                        <span className="text-sm font-semibold">
-
-                                            Customizable
-
-                                        </span>
-
-                                    </div>
-
-                                    <button className="flex items-center gap-2 font-semibold text-slate-900 transition group-hover:text-blue-600">
-
-                                        Learn More
-
-                                        <ArrowRight
-                                            size={18}
-                                            className="transition group-hover:translate-x-1"
-                                        />
-
-                                    </button>
-
-                                </div>
-
-                            </motion.div>
-
-                        );
-
-                    })}
+    ))}
 
                 </div>
 
