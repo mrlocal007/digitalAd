@@ -17,7 +17,7 @@ export default function Contact() {
 
             {/* ================= HERO ================= */}
 
-            <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 py-28 text-white">
+            <section className="relative overflow-hidden bg-linear-to-br from-slate-950 via-blue-950 to-slate-900 py-28 text-white">
 
                 {/* Background Glow */}
 
@@ -25,7 +25,7 @@ export default function Contact() {
 
                     <div className="absolute -left-32 top-0 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl" />
 
-                    <div className="absolute right-0 bottom-0 h-[420px] w-[420px] rounded-full bg-blue-500/20 blur-3xl" />
+                    <div className="absolute right-0 bottom-0 h-105 w-105 rounded-full bg-blue-500/20 blur-3xl" />
 
                 </div>
 

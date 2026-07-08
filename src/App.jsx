@@ -5,53 +5,11 @@ import Footer from "/src/components/layout/Footer";
 
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
-import Capabilities from "/src/data/capabilities";
-import Platforms from "/src/data/products";
+import About from "/src/pages/About";
+import Services from "/src/pages/Services";
+import Solutions from "/src/pages/Solutions";
 
-
-function About() {
-
-    return (
-
-        <div className="pt-28 text-center text-5xl font-bold">
-
-            About
-
-        </div>
-
-    );
-
-}
-
-
-function Services() {
-
-    return (
-
-        <div className="pt-28 text-center text-5xl font-bold">
-
-            Services
-
-        </div>
-
-    );
-
-}
-
-
-function Products() {
-
-    return (
-
-        <div className="pt-28 text-center text-5xl font-bold">
-
-            Products
-
-        </div>
-
-    );
-
-}
+import Studio from "/src/pages/Studio";
 
 
 
@@ -70,9 +28,11 @@ export default function App() {
 
                 <Route path="/about" element={<About />} />
 
-                <Route path="/Services" element={<Capabilities />} />
+                <Route path="/services" element={<Services />} />
 
-                <Route path="/products" element={<Platforms />} />
+                <Route path="/solutions" element={<Solutions />} />
+
+                <Route path="/studio" element={<Studio />} />
 
                 <Route path="/contact" element={<Contact />} />
 

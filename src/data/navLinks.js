@@ -8,13 +8,18 @@ const navLinks = [
     path: "/about",
   },
   {
-    title: "Capabilities",
-    path: "/capabilities",
+    title: "Services",
+    path: "/services",
   },
   {
-    title: "Platforms",
-    path: "/platforms",
+    title: "Solutions",
+    path: "/solutions",
   },
+  {
+    title: "Studio",
+    path: "/studio",
+  },
+  
   {
     title: "Contact",
     path: "/contact",
