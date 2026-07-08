@@ -1,7 +1,7 @@
-import SectionTitle from "../components/ui/SectionTitle";
-import FeatureCard from "../components/ui/FeatureCard";
+import SectionTitle from "/src/components/ui/SectionTitle";
+import FeatureCard from "/src/components/ui/FeatureCard";
 
-import whyChooseUs from "../../data/whyChooseUs";
+import whyChooseUs from "/src/data/whyChooseUs";
 
 export default function WhyModernConcepts() {
     return (

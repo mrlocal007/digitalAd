@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-import SectionTitle from "../components/ui/SectionTitle";
-import industries from "/data/industries";
+import SectionTitle from "/src/components/ui/SectionTitle";
+import industries from "/src/data/industries";
 
 export default function IndustriesSection() {
     return (

@@ -6,6 +6,9 @@ import {
     BriefcaseBusiness,
 } from "lucide-react";
 
+
+
+
 const capabilities = [
     {
         id: 1,

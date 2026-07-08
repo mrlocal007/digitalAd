@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 
-import SectionTitle from "../components/ui/SectionTitle";
-import products from "../../data/products";
-import ProductCard from "../components/ui/ProductCard";
+import SectionTitle from "/src/components/ui/SectionTitle";
+import products from "/src/data/products";
+import ProductCard from "/src/components/ui/ProductCard";
 
 export default function DigitalProductsSection() {
     return (

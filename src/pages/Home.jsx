@@ -4,6 +4,7 @@ import WhyModernConcepts from "../sections/WhyModernConcepts";
 import DigitalProductsSection from "../sections/DigitalProductsSection";
 import IndustriesSection from "../sections/IndustriesSection";
 import MediaStudioSection from "../sections/MediaStudioSection";
+import FooterCTA from "/src/components/layout/FooterCTA";
 
 export default function Home() {
     return (
@@ -19,6 +20,8 @@ export default function Home() {
             <IndustriesSection />
 
             <MediaStudioSection />
+
+            <FooterCTA/>
         </>
     );
 }

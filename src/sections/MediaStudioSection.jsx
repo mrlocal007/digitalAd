@@ -5,11 +5,11 @@ import {
     PlayCircle,
 } from "lucide-react";
 
-import PrimaryButton from "../components/ui/PrimaryButton";
-import FloatingBadge from "../components/ui/FloatingBadge";
-import SectionTitle from "../components/ui/SectionTitle";
+import PrimaryButton from "/src/components/ui/PrimaryButton";
+import FloatingBadge from "/src/components/ui/FloatingBadge";
+import SectionTitle from "/src/components/ui/SectionTitle";
 
-import mediaStudio from "/data/mediaStudio";
+import mediaStudio from "/src/data/mediaStudio";
 
 export default function MediaStudioSection() {
 

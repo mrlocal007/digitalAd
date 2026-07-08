@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import navLinks from "../../data/navLinks";
+import navLinks from "/src/data/navLinks";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -34,13 +34,13 @@ export default function Navbar() {
             <NavLink to="/" className="flex items-center gap-3">
 
               <div className="h-12 w-12 rounded-xl bg-blue-700 text-white flex items-center justify-center font-bold text-xl shadow-lg">
-                MC
+                AD
               </div>
 
               <div>
 
                 <h2 className="font-bold text-xl text-slate-900 leading-none">
-                  Modern Concepts
+                  Advanced Digital Solutions
                 </h2>
 
                 <p className="text-xs text-slate-500">

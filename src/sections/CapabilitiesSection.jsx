@@ -6,10 +6,10 @@ import {
     CheckCircle2,
 } from "lucide-react";
 
-import SectionTitle from "../components/ui/SectionTitle";
-import CapabilityItem from "../components/ui/CapabilityItem";
+import SectionTitle from "/src/components/ui/SectionTitle";
+import CapabilityItem from "/src/components/ui/CapabilityItem";
 
-import capabilities from "/data/capabilities";
+import capabilities from "/src/data/capabilities";
 
 export default function CapabilitiesSection() {
     const [activeId, setActiveId] = useState(1);

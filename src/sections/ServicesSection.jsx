@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-import SectionTitle from "../components/ui/SectionTitle";
-import ServiceCard from "../components/ui/ServiceCard";
-import PrimaryButton from "../components/ui/PrimaryButton";
+import SectionTitle from "/src/components/ui/SectionTitle";
+import ServiceCard from "/src/components/ui/ServiceCard";
+import PrimaryButton from "/src/components/ui/PrimaryButton";
 
-import services from "../../data/services";
+import services from "/src/data/services";
 
 export default function ServicesSection() {
     return (

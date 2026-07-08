@@ -8,12 +8,12 @@ const navLinks = [
     path: "/about",
   },
   {
-    title: "Services",
-    path: "/services",
+    title: "Capabilities",
+    path: "/capabilities",
   },
   {
-    title: "Products",
-    path: "/products",
+    title: "Platforms",
+    path: "/platforms",
   },
   {
     title: "Contact",
