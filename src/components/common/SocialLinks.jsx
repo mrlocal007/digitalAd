@@ -76,6 +76,7 @@ export default function SocialLinks({
                             border
                             border-slate-200
                             bg-white
+                            text-slate-600                        
                             px-4
                             transition-all
                             duration-300

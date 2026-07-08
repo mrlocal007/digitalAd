@@ -12,7 +12,7 @@ export default function WhyModernConcepts() {
                 <SectionTitle
                     badge="OUR PROMISE"
                     title="Why"
-                    highlight="Modern Concepts"
+                    highlight="AD Technologies"
                     description="We are more than a software development company. We combine technology, AI, branding, media production and business consulting to become your long-term digital transformation partner."
                 />
 
