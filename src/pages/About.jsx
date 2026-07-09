@@ -63,7 +63,7 @@ export default function About() {
     return (
         <>
             {/* Hero */}
-            <section className="bg-linear-to-br from-slate-950 via-blue-950 to-slate-900 pt-36 pb-24 text-white">
+            <section className="bg-linear-to-br from-slate-950 via-blue-950 to-slate-900 pt-24 pb-16 md:pt-28 md:pb-20 lg:pt-36 lg:pb-24 text-white">
                 <div className="mx-auto max-w-7xl px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 25 }}

@@ -135,7 +135,7 @@ export default function Solutions() {
 
             {/* FEATURED */}
 
-            <section className="py-24">
+            <section className="pt-24 pb-16 md:pt-28 md:pb-20 lg:pt-36 lg:pb-24">
 
                 <div className="mx-auto max-w-7xl px-6">
 

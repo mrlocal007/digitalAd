@@ -163,7 +163,7 @@ export default function Hero() {
 
             </div>
 
-            <div className="absolute -bottom-10 -left-8 rounded-2xl border border-white/10 bg-blue-600 p-5 shadow-2xl">
+            <div className="absolute -bottom-25 rounded-2xl border border-white/10 bg-blue-600 p-5 shadow-2xl">
 
               <div className="flex items-center gap-4">
 
