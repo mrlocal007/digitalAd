@@ -9,6 +9,8 @@ import About from "/src/pages/About";
 import Services from "/src/pages/Services";
 import Solutions from "/src/pages/Solutions";
 
+import BusinessSnapshot from "./pages/BusinessSnapshot";
+
 import Studio from "/src/pages/Studio";
 
 
@@ -25,6 +27,8 @@ export default function App() {
             <Routes>
 
                 <Route path="/" element={<Home />} />
+
+                <Route path="/snapshot" element={<BusinessSnapshot />} />
 
                 <Route path="/about" element={<About />} />
 

@@ -4,6 +4,10 @@ const navLinks = [
     path: "/",
   },
   {
+    title: "Snapshot",
+    path: "/snapshot",
+  },
+  {
     title: "About",
     path: "/about",
   },
