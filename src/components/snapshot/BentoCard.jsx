@@ -13,6 +13,7 @@ export default function BentoCard({
                 transition: { duration: 0.2 },
             }}
             className={`
+                h-full
                 group
                 relative
                 overflow-hidden

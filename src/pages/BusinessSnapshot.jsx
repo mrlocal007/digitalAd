@@ -37,37 +37,49 @@ export default function BusinessSnapshot() {
 
                     <BentoGrid>
 
-                        <ProblemsCard />                        
+                        <div className="xl:col-span-4 xl:row-span-2">
+                            <ProblemsCard />
+                        </div>
 
-                        <CapabilitiesCard />
+                        <div className="xl:col-span-8 xl:row-span-2">
+                            <CapabilitiesCard />
+                        </div>
 
-                        <PlatformsCard />
+                        <div className="xl:col-span-4 xl:row-span-2">
+                            <PlatformsCard />
+                        </div>
 
-                        <ProcessCard />
+                        <div className="xl:col-span-5">
+                            <ProcessCard />
+                        </div>
 
-                        <BentoCard
-                            icon={Building2}
-                            title="Industries"
-                            className="xl:col-span-4"
-                        />
-
+                        <div className="xl:col-span-3">
                         <BentoCard
                             icon={Clapperboard}
                             title="Media Studio"
-                            className="xl:col-span-3"
                         />
+                        </div>
 
+                        <div className="xl:col-span-4">
+                        <BentoCard
+                            icon={Building2}
+                            title="Industries"
+                        />
+                        </div>
+
+                        <div className="xl:col-span-5">
                         <BentoCard
                             icon={Phone}
                             title="Contact"
-                            className="xl:col-span-5"
                         />
+                        </div>
 
+                        <div className="xl:col-span-3">
                         <BentoCard
                             icon={Share2}
                             title="Social"
-                            className="xl:col-span-3"
                         />
+                        </div>
 
                     </BentoGrid>
 

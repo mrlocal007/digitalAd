@@ -1,67 +1,11 @@
 import BentoCard from "./BentoCard";
 
-import {
-    Globe,
-    Smartphone,
-    Bot,
-    Cloud,
-    Workflow,
-    Palette,
-    BarChart3,
-    ShieldCheck,
-    Search,
-    BriefcaseBusiness,
-} from "lucide-react";
+import { capabilities } from "/src/data/businessSnapshot";
 
-const capabilities = [
-    {
-        icon: Globe,
-        title: "Web Apps",
-    },
-    {
-        icon: Smartphone,
-        title: "Mobile Apps",
-    },
-    {
-        icon: Bot,
-        title: "AI Solutions",
-    },
-    {
-        icon: Cloud,
-        title: "Cloud Platforms",
-    },
-    {
-        icon: Workflow,
-        title: "Automation",
-    },
-    {
-        icon: Palette,
-        title: "UI / UX",
-    },
-    {
-        icon: BarChart3,
-        title: "Analytics",
-    },
-    {
-        icon: ShieldCheck,
-        title: "Cyber Security",
-    },
-    {
-        icon: Search,
-        title: "SEO / GEO",
-    },
-    {
-        icon: BriefcaseBusiness,
-        title: "Consulting",
-    },
-];
 
 export default function CapabilitiesCard() {
     return (
-        <BentoCard
-            title="Core Capabilities"
-            className="xl:col-span-8 xl:row-span-2"
-        >
+        <BentoCard title="Core Capabilities">
             <div className="grid grid-cols-2 gap-x-6 gap-y-5">
 
                 {capabilities.map((item) => {

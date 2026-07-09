@@ -1,57 +1,11 @@
 import BentoCard from "./BentoCard";
+import { problems } from "/src/data/businessSnapshot";
 
-import {
-    TrendingUp,
-    Bot,
-    Globe,
-    Megaphone,
-    Workflow,
-    BriefcaseBusiness,
-    Smartphone,
-    ShieldCheck,
-} from "lucide-react";
-
-const problems = [
-    {
-        icon: TrendingUp,
-        title: "Business Growth",
-    },
-    {
-        icon: Bot,
-        title: "AI Automation",
-    },
-    {
-        icon: Globe,
-        title: "Digital Presence",
-    },
-    {
-        icon: Megaphone,
-        title: "Lead Generation",
-    },
-    {
-        icon: Workflow,
-        title: "Process Automation",
-    },
-    {
-        icon: BriefcaseBusiness,
-        title: "Business Systems",
-    },
-    {
-        icon: Smartphone,
-        title: "Mobile Solutions",
-    },
-    {
-        icon: ShieldCheck,
-        title: "Secure Platforms",
-    },
-];
 
 export default function ProblemsCard() {
     return (
-        <BentoCard
-            title="What We Solve"
-            className="xl:col-span-4 xl:row-span-2"
-        >
+        <BentoCard title="What We Solve">
+            
             <div className="grid grid-cols-2 gap-5">
 
                 {problems.map((item) => {

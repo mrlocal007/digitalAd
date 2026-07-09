@@ -1,48 +1,9 @@
 import BentoCard from "./BentoCard";
-
-import {
-    Search,
-    Lightbulb,
-    PencilRuler,
-    Code2,
-    Rocket,
-    TrendingUp,
-    ArrowRight,
-} from "lucide-react";
-
-const process = [
-    {
-        icon: Search,
-        title: "Discover",
-    },
-    {
-        icon: Lightbulb,
-        title: "Strategy",
-    },
-    {
-        icon: PencilRuler,
-        title: "Design",
-    },
-    {
-        icon: Code2,
-        title: "Build",
-    },
-    {
-        icon: Rocket,
-        title: "Launch",
-    },
-    {
-        icon: TrendingUp,
-        title: "Grow",
-    },
-];
+import { process } from "/src/data/businessSnapshot";
 
 export default function ProcessCard() {
     return (
-        <BentoCard
-            title="Delivery Process"
-            className="xl:col-span-5"
-        >
+        <BentoCard title="Delivery Process">
             <div className="mt-8 flex items-center justify-between overflow-x-auto pb-2">
 
                 {process.map((step, index) => {

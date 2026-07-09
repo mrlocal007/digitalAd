@@ -1,67 +1,9 @@
 import BentoCard from "./BentoCard";
-
-import {
-    Users,
-    Briefcase,
-    ClipboardCheck,
-    GraduationCap,
-    Bot,
-    MonitorSmartphone,
-    LayoutDashboard,
-    Database,
-    ShoppingBag,
-    HeartPulse,
-} from "lucide-react";
-
-const platforms = [
-    {
-        icon: Users,
-        title: "CRM",
-    },
-    {
-        icon: Briefcase,
-        title: "ERP",
-    },
-    {
-        icon: ClipboardCheck,
-        title: "Attendance",
-    },
-    {
-        icon: GraduationCap,
-        title: "LMS",
-    },
-    {
-        icon: Bot,
-        title: "AI Assistant",
-    },
-    {
-        icon: MonitorSmartphone,
-        title: "Custom Apps",
-    },
-    {
-        icon: LayoutDashboard,
-        title: "Dashboards",
-    },
-    {
-        icon: Database,
-        title: "Data Platforms",
-    },
-    {
-        icon: ShoppingBag,
-        title: "eCommerce",
-    },
-    {
-        icon: HeartPulse,
-        title: "Healthcare",
-    },
-];
+import { platforms } from "/src/data/businessSnapshot";
 
 export default function PlatformsCard() {
     return (
-        <BentoCard
-            title="Digital Platforms"
-            className="xl:col-span-4 xl:row-span-2"
-        >
+        <BentoCard title="Digital Platforms">
             <div className="grid grid-cols-2 gap-x-6 gap-y-5">
 
                 {platforms.map((item) => {
