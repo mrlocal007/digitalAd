@@ -1,6 +1,7 @@
 import BentoCard from "./BentoCard";
-import { problems } from "/src/data/businessSnapshot";
+import { businessSnapshot } from "/src/data/businessSnapshot";
 
+const { problems } = businessSnapshot;
 
 export default function ProblemsCard() {
     return (

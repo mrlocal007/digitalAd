@@ -1,7 +1,7 @@
 import BentoCard from "./BentoCard";
 
-import { capabilities } from "/src/data/businessSnapshot";
-
+import { businessSnapshot } from "/src/data/businessSnapshot";
+const { capabilities } = businessSnapshot;
 
 export default function CapabilitiesCard() {
     return (

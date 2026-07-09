@@ -1,5 +1,6 @@
 import BentoCard from "./BentoCard";
-import { process } from "/src/data/businessSnapshot";
+import { businessSnapshot } from "/src/data/businessSnapshot";
+const { process } = businessSnapshot
 
 export default function ProcessCard() {
     return (
