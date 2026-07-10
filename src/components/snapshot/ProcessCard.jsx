@@ -1,7 +1,7 @@
 import BentoCard from "./BentoCard";
 import { businessSnapshot } from "/src/data/businessSnapshot";
 const { process } = businessSnapshot
-
+import { ArrowRight } from "lucide-react";
 export default function ProcessCard() {
     return (
         <BentoCard title="Delivery Process">

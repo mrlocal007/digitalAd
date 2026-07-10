@@ -42,15 +42,18 @@ import {
     Radio,
     Film,
 
-    Linkedin,
-    Facebook,
-    Instagram,
-    Youtube,
-
     Phone,
     Mail,
     MapPin,
 } from "lucide-react";
+
+import {
+    FaLinkedin,
+    FaFacebook,
+    FaInstagram,
+    FaYoutube,
+    FaWhatsapp,
+} from "react-icons/fa6";
 
 export const businessSnapshot = {
 
@@ -67,6 +70,7 @@ export const businessSnapshot = {
         { icon: BriefcaseBusiness, title: "Business Systems" },
         { icon: Smartphone, title: "Mobile Solutions" },
         { icon: ShieldCheck, title: "Secure Platforms" },
+        
     ],
 
     /* ===========================
@@ -101,6 +105,7 @@ export const businessSnapshot = {
         { icon: Database, title: "Data Platforms" },
         { icon: ShoppingBag, title: "eCommerce" },
         { icon: HeartPulse, title: "Healthcare" },
+        
     ],
 
     /* ===========================
@@ -114,6 +119,7 @@ export const businessSnapshot = {
         { icon: Code2, title: "Build" },
         { icon: Rocket, title: "Launch" },
         { icon: TrendingUp, title: "Grow" },
+        
     ],
 
     /* ===========================
@@ -129,6 +135,7 @@ export const businessSnapshot = {
         { icon: ShoppingCart, title: "Retail" },
         { icon: Hotel, title: "Hospitality" },
         { icon: BriefcaseBusiness, title: "Real Estate" },
+        
     ],
 
     /* ===========================
@@ -144,6 +151,7 @@ export const businessSnapshot = {
         { icon: MonitorPlay, title: "Live Streaming" },
         { icon: Radio, title: "Broadcast" },
         { icon: Film, title: "Editing" },
+        
     ],
 
     /* ===========================
@@ -151,20 +159,51 @@ export const businessSnapshot = {
     =========================== */
 
     contact: {
+        company: "AD Digital Solutions",
+        tagline: "Digital Transformation & Media Solutions",
+
         phone: "+91 98170 48962",
+
         email: "info@admedianetwork.in",
-        address: "Rohtak, Haryana",
+
+        whatsapp: "https://wa.me/919817048962",
+
+        website: "https://www.admedianetwork.in",
+
+        address: [
+        "Aryadahiya Media Network Pvt. Ltd.",
+        "Old ITI, Plot No.110",
+        "Jagdish Colony",
+        "Rohtak, Haryana 124001",
+        ],
     },
 
-    /* ===========================
-       SOCIAL
-    =========================== */
-
     social: [
-        { icon: Linkedin, title: "LinkedIn" },
-        { icon: Facebook, title: "Facebook" },
-        { icon: Instagram, title: "Instagram" },
-        { icon: Youtube, title: "YouTube" },
+    {
+        icon: FaLinkedin,
+        title: "LinkedIn",
+        url: "#",
+    },
+    {
+        icon: FaFacebook,
+        title: "Facebook",
+        url: "https://www.facebook.com/share/1BgkaL2RwK/",
+    },
+    {
+        icon: FaInstagram,
+        title: "Instagram",
+        url: "https://www.instagram.com/ad_media_global",
+    },
+    {
+        icon: FaYoutube,
+        title: "YouTube",
+        url: "#",
+    },
+    {
+        icon: FaWhatsapp,
+        title: "WhatsApp",
+        url: "https://wa.me/919817048962",
+    },
     ],
 
     /* ===========================

@@ -6,14 +6,11 @@ import ProblemsCard from "../components/snapshot/ProblemsCard";
 import CapabilitiesCard from "../components/snapshot/CapabilitiesCard";
 import PlatformsCard from "../components/snapshot/PlatformsCard";
 import ProcessCard from "../components/snapshot/ProcessCard";
-import BentoCard from "../components/snapshot/BentoCard";
+import ConnectCard from "/src/components/snapshot/ConnectCard";
 
-import {        
-    Building2,
-    Clapperboard,
-    Phone,
-    Share2,
-} from "lucide-react";
+import MediaStudioCard from "../components/snapshot/MediaStudioCard";
+import IndustriesCard from "../components/snapshot/IndustriesCard";
+
 
 export default function BusinessSnapshot() {
     return (
@@ -51,34 +48,19 @@ export default function BusinessSnapshot() {
 
                         <div className="xl:col-span-5">
                             <ProcessCard />
+                        </div>                        
+
+                        <div className="xl:col-span-3 xl:row-span-2">
+                            <MediaStudioCard />
                         </div>
 
-                        <div className="xl:col-span-3">
-                        <BentoCard
-                            icon={Clapperboard}
-                            title="Media Studio"
-                        />
+
+                        <div className="xl:col-span-4 xl:row-span-2">
+                            <IndustriesCard />
                         </div>
 
-                        <div className="xl:col-span-4">
-                        <BentoCard
-                            icon={Building2}
-                            title="Industries"
-                        />
-                        </div>
-
-                        <div className="xl:col-span-5">
-                        <BentoCard
-                            icon={Phone}
-                            title="Contact"
-                        />
-                        </div>
-
-                        <div className="xl:col-span-3">
-                        <BentoCard
-                            icon={Share2}
-                            title="Social"
-                        />
+                        <div className="xl:col-span-8 xl:row-span-2">
+                            <ConnectCard />
                         </div>
 
                     </BentoGrid>
