@@ -2,66 +2,44 @@ function clsx(...classes) {
     return classes.filter(Boolean).join(" ");
 }
 
-const accentClasses = {
-    cyan: {
-        icon: "bg-cyan-500/10 text-cyan-300",
-        hover: "hover:bg-cyan-500/5",
-    },
-
-    blue: {
-        icon: "bg-blue-500/10 text-blue-300",
-        hover: "hover:bg-blue-500/5",
-    },
-
-    emerald: {
-        icon: "bg-emerald-500/10 text-emerald-300",
-        hover: "hover:bg-emerald-500/5",
-    },
-
-    violet: {
-        icon: "bg-violet-500/10 text-violet-300",
-        hover: "hover:bg-violet-500/5",
-    },
-
-    rose: {
-        icon: "bg-rose-500/10 text-rose-300",
-        hover: "hover:bg-rose-500/5",
-    },
-
-    orange: {
-        icon: "bg-orange-500/10 text-orange-300",
-        hover: "hover:bg-orange-500/5",
-    },
+const accentStyles = {
+    cyan: "text-cyan-300 bg-cyan-500/10",
+    blue: "text-blue-300 bg-blue-500/10",
+    emerald: "text-emerald-300 bg-emerald-500/10",
+    orange: "text-orange-300 bg-orange-500/10",
+    violet: "text-violet-300 bg-violet-500/10",
+    rose: "text-rose-300 bg-rose-500/10",
+    slate: "text-slate-300 bg-slate-500/10",
 };
 
 export default function SnapshotList({
     items,
     accent = "cyan",
+    variant = "default",
 }) {
 
-    const colors = accentClasses[accent];
+    const gridClass = (() => {
 
-    /* ---------------------------------
-       Auto responsive columns
-    ---------------------------------- */
+        switch (variant) {
 
-    const desktopCols =
-        items.length <= 6
-            ? "lg:grid-cols-2"
-            : items.length <= 12
-            ? "lg:grid-cols-3"
-            : "lg:grid-cols-4";
+            case "capabilities":
+                return "grid grid-cols-2 xl:grid-cols-4 gap-3";
+
+            case "platforms":
+                return "grid grid-cols-2 lg:grid-cols-2 gap-3";
+
+            case "industries":
+                return "grid grid-cols-2 gap-3";
+
+            default:
+                return "grid grid-cols-2 gap-3";
+        }
+
+    })();
 
     return (
 
-        <div
-            className={clsx(
-                "grid",
-                "grid-cols-2",
-                desktopCols,
-                "gap-3 lg:gap-4"
-            )}
-        >
+        <div className={gridClass}>
 
             {items.map((item) => {
 
@@ -71,29 +49,43 @@ export default function SnapshotList({
 
                     <div
                         key={item.title}
-                        className={clsx(
-                            "group flex items-center gap-3 rounded-xl p-2 transition-all duration-300",
-                            colors.hover
-                        )}
-                    >
+                        className="
+                        flex
+                        items-center
+                        gap-3
 
-                        <div
-                            className={clsx(
-                                "flex h-9 w-9 lg:h-10 lg:w-10 shrink-0 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110",
-                                colors.icon
-                            )}
-                        >
+                        rounded-xl
 
-                            <Icon size={18} />
+                        border
+                        border-white/10
 
-                        </div>
+                        bg-white/5
 
-                        <span
-                            className="
+                        px-3
+                        py-3
+
+                        transition-all
+                        duration-300
+
+                        hover:border-white/20
+                        hover:bg-white/10
+                    ">
+                        
+
+                    {Icon && (
+
+                    <div className={clsx( "flex h-9 w-9 items-center justify-center rounded-lg shrink-0",accentStyles[accent])} >
+                        <Icon size={18} />
+                    </div>
+
+                    )}
+
+                    <span
+                        className="
                                 text-xs
                                 lg:text-sm
                                 font-medium
-                                leading-snug
+                                leading-tight
                                 text-slate-200
                             "
                         >

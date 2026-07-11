@@ -1,96 +1,70 @@
 import BentoCard from "./BentoCard";
 import { businessSnapshot } from "/src/data/businessSnapshot";
 
+import { Clapperboard } from "lucide-react";
+import SectionHeader from "./SectionHeader";
+
 export default function MediaStudioCard() {
     const { studio } = businessSnapshot;
 
     return (
-        <BentoCard title="Media Studio">
+        <BentoCard>
 
-            <div className="grid grid-cols-2 gap-3">
+    <SectionHeader
+        icon={Clapperboard}
+        title="Media Studio"
+        accent="rose"
+    />
 
-    {studio.map((item) => {
+    <div className="grid grid-cols-2 gap-3">
 
-        const Icon = item.icon;
+        {businessSnapshot.studio.map((item) => {
 
-        return (
+            const Icon = item.icon;
 
-            <div
-                key={item.title}
-                className="
-                    group
-                    rounded-2xl
-                    border
-                    border-white/10
-                    bg-white/5
-
-                    p-4
-
-                    flex
-                    flex-col
-                    items-center
-                    justify-center
-
-                    text-center
-
-                    transition-all
-                    duration-300
-
-                    hover:bg-rose-500/5
-                    hover:border-rose-400/40
-                "
-            >
+            return (
 
                 <div
+                    key={item.title}
                     className="
-                        mb-3
-
                         flex
-                        h-10
-                        w-10
-
+                        flex-col
                         items-center
                         justify-center
 
                         rounded-xl
 
-                        bg-rose-500/10
-                        text-rose-300
+                        border
+                        border-white/10
 
-                        transition-transform
+                        bg-white/5
+
+                        p-4
+
+                        transition-all
                         duration-300
 
-                        group-hover:scale-110
+                        hover:bg-white/10
                     "
                 >
 
-                    <Icon size={20} />
+                    <Icon
+                        size={20}
+                        className="mb-2 text-rose-300"
+                    />
+
+                    <span className="text-center text-xs font-medium text-slate-200 leading-tight">
+                        {item.title}
+                    </span>
 
                 </div>
 
-                <span
-                    className="
-                        text-xs
-                        lg:text-sm
+            );
 
-                        font-medium
+        })}
 
-                        text-slate-200
+    </div>
 
-                        leading-tight
-                    "
-                >
-                    {item.title}
-                </span>
-
-            </div>
-
-        );
-
-    })}
-
-</div>
-
-        </BentoCard>
+</BentoCard>
     );
 }

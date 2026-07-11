@@ -1,10 +1,20 @@
 import BentoCard from "./BentoCard";
 import { businessSnapshot } from "/src/data/businessSnapshot";
+
+import { Workflow } from "lucide-react";
+import SectionHeader from "./SectionHeader";
+
 const { process } = businessSnapshot
 export default function ProcessCard() {
     return (
         <BentoCard title="Delivery Process">
-            <div
+            <SectionHeader
+            icon={Workflow}
+            title="Delivery Process"
+            accent="orange"
+            />
+
+        <div
                 className="
         mt-6
         grid
@@ -12,9 +22,9 @@ export default function ProcessCard() {
         sm:grid-cols-3
         xl:grid-cols-6
         gap-5
-    "
->
-    {process.map((step, index) => {
+        "
+        >
+        {process.map((step, index) => {
 
         const Icon = step.icon;
 
@@ -70,7 +80,7 @@ export default function ProcessCard() {
                             w-full
                             h-px
 
-                            bg-gradient-to-r
+                            bg-linear-to-r
                             from-orange-400/40
                             to-transparent
                         "
@@ -83,7 +93,7 @@ export default function ProcessCard() {
         );
 
     })}
-</div>
-        </BentoCard>
+    </div>
+    </BentoCard>
     );
 }

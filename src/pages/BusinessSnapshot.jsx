@@ -20,9 +20,9 @@ export default function BusinessSnapshot() {
 
             <div className="fixed inset-0 overflow-hidden pointer-events-none">
 
-                <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[140px]" />
+                <div className="absolute left-0 top-0 h-125 w-125 rounded-full bg-cyan-500/10 blur-[140px]" />
 
-                <div className="absolute right-0 bottom-0 h-[450px] w-[450px] rounded-full bg-blue-600/10 blur-[140px]" />
+                <div className="absolute right-0 bottom-0 h-112.5 w-112.5 rounded-full bg-blue-600/10 blur-[140px]" />
 
             </div>
 
@@ -46,9 +46,7 @@ export default function BusinessSnapshot() {
                             <PlatformsCard />
                         </div>
 
-                        <div className="xl:col-span-5">
-                            <ProcessCard />
-                        </div>                        
+                                                
 
                         <div className="xl:col-span-3 ">
                             <MediaStudioCard />
@@ -59,9 +57,15 @@ export default function BusinessSnapshot() {
                             <IndustriesCard />
                         </div>
 
+                        <div className="xl:col-span-5">
+                            <ProcessCard />
+                        </div>
+                        
                         <div className="xl:col-span-8 ">
                             <ConnectCard />
                         </div>
+
+                        
 
                     </BentoGrid>
 

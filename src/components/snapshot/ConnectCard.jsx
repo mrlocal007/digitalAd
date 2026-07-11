@@ -2,6 +2,9 @@ import BentoCard from "./BentoCard";
 
 import { businessSnapshot } from "/src/data/businessSnapshot";
 
+import { ContactRound } from "lucide-react";
+import SectionHeader from "./SectionHeader";
+
 import {
     MapPin,
     Phone,
@@ -17,6 +20,16 @@ export default function ConnectCard() {
     return (
 
         <BentoCard title="Connect With Us">
+
+            <SectionHeader
+
+            icon={ContactRound}
+
+            title="Connect With Us"
+
+            accent="slate"
+
+            />
 
             <div className="grid md:grid-cols-2 gap-8 h-full">
 
@@ -198,6 +211,7 @@ export default function ConnectCard() {
                 </div>
 
             </div>
+
 
         </BentoCard>
 
