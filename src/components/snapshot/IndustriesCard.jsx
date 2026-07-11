@@ -10,8 +10,7 @@ export default function IndustriesCard() {
         <BentoCard title="Industries">
             <SnapshotList
                 items={businessSnapshot.industries}
-                accent="violet"
-                columns={2}
+                accent="violet"                
             />
         </BentoCard>
     );

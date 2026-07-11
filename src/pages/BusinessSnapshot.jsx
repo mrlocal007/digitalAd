@@ -14,7 +14,7 @@ import IndustriesCard from "../components/snapshot/IndustriesCard";
 
 export default function BusinessSnapshot() {
     return (
-        <main className="min-h-screen bg-slate-950">
+        <main className="min-h-screen bg-slate-950 py-12 lg:py-16">
 
             {/* Background Glow */}
 
@@ -26,7 +26,7 @@ export default function BusinessSnapshot() {
 
             </div>
 
-            <div className="relative z-10 mx-auto max-w-7xl px-6 py-12 lg:px-8">
+            <div className="relative z-10 mx-auto max-w-375 px-4 sm:px-6 xl:px-8">
 
                 <SnapshotHeader />
 
@@ -34,15 +34,15 @@ export default function BusinessSnapshot() {
 
                     <BentoGrid>
 
-                        <div className="xl:col-span-4 xl:row-span-2">
+                        <div className="xl:col-span-4 ">
                             <ProblemsCard />
                         </div>
 
-                        <div className="xl:col-span-8 xl:row-span-2">
+                        <div className="xl:col-span-8 ">
                             <CapabilitiesCard />
                         </div>
 
-                        <div className="xl:col-span-4 xl:row-span-2">
+                        <div className="xl:col-span-4 ">
                             <PlatformsCard />
                         </div>
 
@@ -50,16 +50,16 @@ export default function BusinessSnapshot() {
                             <ProcessCard />
                         </div>                        
 
-                        <div className="xl:col-span-3 xl:row-span-2">
+                        <div className="xl:col-span-3 ">
                             <MediaStudioCard />
                         </div>
 
 
-                        <div className="xl:col-span-4 xl:row-span-2">
+                        <div className="xl:col-span-4 ">
                             <IndustriesCard />
                         </div>
 
-                        <div className="xl:col-span-8 xl:row-span-2">
+                        <div className="xl:col-span-8 ">
                             <ConnectCard />
                         </div>
 

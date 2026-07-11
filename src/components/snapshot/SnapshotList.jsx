@@ -23,61 +23,91 @@ const accentClasses = {
         hover: "hover:bg-violet-500/5",
     },
 
-    orange: {
-        icon: "bg-orange-500/10 text-orange-300",
-        hover: "hover:bg-orange-500/5",
-    },
-
     rose: {
         icon: "bg-rose-500/10 text-rose-300",
         hover: "hover:bg-rose-500/5",
     },
+
+    orange: {
+        icon: "bg-orange-500/10 text-orange-300",
+        hover: "hover:bg-orange-500/5",
+    },
 };
 
 export default function SnapshotList({
-    items = [],
-    columns = 2,
+    items,
     accent = "cyan",
 }) {
+
     const colors = accentClasses[accent];
 
-    if (!items.length) return null;
-    
+    /* ---------------------------------
+       Auto responsive columns
+    ---------------------------------- */
+
+    const desktopCols =
+        items.length <= 6
+            ? "lg:grid-cols-2"
+            : items.length <= 12
+            ? "lg:grid-cols-3"
+            : "lg:grid-cols-4";
+
     return (
+
         <div
             className={clsx(
-                "grid gap-x-6 gap-y-4",
-                columns === 1 && "grid-cols-1",
-                columns === 2 && "grid-cols-2",
-                columns === 3 && "grid-cols-3"
+                "grid",
+                "grid-cols-2",
+                desktopCols,
+                "gap-3 lg:gap-4"
             )}
         >
+
             {items.map((item) => {
+
                 const Icon = item.icon;
 
                 return (
+
                     <div
                         key={item.title}
                         className={clsx(
-                            "flex items-center gap-3 rounded-xl p-2 transition-all duration-300",
+                            "group flex items-center gap-3 rounded-xl p-2 transition-all duration-300",
                             colors.hover
                         )}
                     >
+
                         <div
                             className={clsx(
-                                "flex h-10 w-10 items-center justify-center rounded-xl",
+                                "flex h-9 w-9 lg:h-10 lg:w-10 shrink-0 items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110",
                                 colors.icon
                             )}
                         >
+
                             <Icon size={18} />
+
                         </div>
 
-                        <span className="text-sm font-medium text-slate-200">
+                        <span
+                            className="
+                                text-xs
+                                lg:text-sm
+                                font-medium
+                                leading-snug
+                                text-slate-200
+                            "
+                        >
                             {item.title}
                         </span>
+
                     </div>
+
                 );
+
             })}
+
         </div>
+
     );
+
 }

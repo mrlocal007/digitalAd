@@ -1,62 +1,89 @@
 import BentoCard from "./BentoCard";
 import { businessSnapshot } from "/src/data/businessSnapshot";
 const { process } = businessSnapshot
-import { ArrowRight } from "lucide-react";
 export default function ProcessCard() {
     return (
         <BentoCard title="Delivery Process">
-            <div className="mt-8 flex items-center justify-between overflow-x-auto pb-2">
+            <div
+                className="
+        mt-6
+        grid
+        grid-cols-2
+        sm:grid-cols-3
+        xl:grid-cols-6
+        gap-5
+    "
+>
+    {process.map((step, index) => {
 
-                {process.map((step, index) => {
+        const Icon = step.icon;
 
-                    const Icon = step.icon;
+        return (
 
-                    return (
+            <div
+                key={step.title}
+                className="relative flex flex-col items-center"
+            >
 
-                        <div
-                            key={step.title}
-                            className="flex items-center"
-                        >
+                <div
+                    className="
+                        flex
+                        h-12
+                        w-12
+                        items-center
+                        justify-center
+                        rounded-2xl
+                        bg-orange-500/10
+                        text-orange-300
+                        transition-all
+                        duration-300
+                        hover:scale-110
+                    "
+                >
+                    <Icon size={22} />
+                </div>
 
-                            <div className="flex flex-col items-center min-w-[72px]">
+                <span
+                    className="
+                        mt-3
+                        text-center
+                        text-xs
+                        lg:text-sm
+                        font-medium
+                        text-slate-300
+                    "
+                >
+                    {step.title}
+                </span>
 
-                                <div
-                                    className="
-                                        flex
-                                        h-12
-                                        w-12
-                                        items-center
-                                        justify-center
-                                        rounded-2xl
-                                        bg-orange-500/10
-                                        text-orange-300
-                                    "
-                                >
-                                    <Icon size={22} />
-                                </div>
+                {index < process.length - 1 && (
 
-                                <span className="mt-3 text-xs font-medium text-slate-300 text-center">
-                                    {step.title}
-                                </span>
+                    <div
+                        className="
+                            hidden
+                            xl:block
 
-                            </div>
+                            absolute
+                            top-6
+                            left-[72%]
 
-                            {index < process.length - 1 && (
+                            w-full
+                            h-px
 
-                                <ArrowRight
-                                    size={18}
-                                    className="mx-4 text-slate-500"
-                                />
+                            bg-gradient-to-r
+                            from-orange-400/40
+                            to-transparent
+                        "
+                    />
 
-                            )}
-
-                        </div>
-
-                    );
-
-                })}
+                )}
 
             </div>
+
+        );
+
+    })}
+</div>
         </BentoCard>
     );
 }

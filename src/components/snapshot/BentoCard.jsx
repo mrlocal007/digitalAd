@@ -9,28 +9,42 @@ export default function BentoCard({
     return (
         <motion.div
             whileHover={{
-                y: -6,
-                transition: { duration: 0.2 },
-            }}
-            className={`
-                h-full
-                group
-                relative
-                overflow-hidden
-                rounded-[32px]
-                border
-                border-white/10
-                bg-white/5
-                backdrop-blur-xl
-                p-7
-                transition-all
-                duration-300
-                hover:border-cyan-400/40
-                hover:bg-white/8
-                hover:shadow-[0_0_40px_rgba(34,211,238,0.12)]
-                ${className}
-            `}
-        >
+            y: -4,
+            transition: {
+            duration: 0.25,
+            },
+        }}
+        className={`
+            group
+
+            h-full
+
+            flex
+            flex-col
+
+            rounded-3xl
+
+            border
+            border-white/10
+
+            bg-white/5
+
+            backdrop-blur-xl
+
+            p-5
+            lg:p-6
+            xl:p-7
+
+            transition-all
+            duration-300
+
+            hover:border-cyan-400/40
+
+            hover:shadow-[0_20px_60px_rgba(0,0,0,.25)]
+
+        ${className}
+    `}
+    >
             {/* Glow */}
 
             <div
@@ -74,8 +88,23 @@ export default function BentoCard({
             {/* Title */}
 
             {title && (
-                <h3 className="text-xl font-semibold text-white">
+                <h3
+                    className="
+                    text-lg
+                    lg:text-xl
+
+                    font-semibold
+
+                    tracking-tight
+
+                  text-white
+
+                    mb-6
+                    "
+                    >
+                    
                     {title}
+                    
                 </h3>
             )}
 
